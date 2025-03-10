@@ -21,7 +21,7 @@ const GeneralContextProvider = ({children}) => {
     
       const fetchTopNews = async () => {
         try {
-          const response = await axios.get("https://newsapi.org/v2/everything?q=tesla&from=2025-02-07&sortBy=publishedAt&apiKey=bd6c167a0cc64287ba0c217cc51b499c");
+          const response = await axios.get("https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=bd6c167a0cc64287ba0c217cc51b499c");
           setTopNews(response.data.articles);
         } catch (error) {
           console.error(error);
